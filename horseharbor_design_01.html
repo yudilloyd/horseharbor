@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horse Harbor | 思考する競馬予想ポートフォリオ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+        .hero-pattern {
+            background-color: #111827;
+            background-image: radial-gradient(#374151 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header -->
+    <header class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50 border-b border-gray-100">
+        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#" class="flex items-center gap-2">
+                <div class="w-8 h-8 bg-blue-900 rounded flex items-center justify-center text-white font-bold">H</div>
+                <span class="text-xl font-bold tracking-tighter text-blue-900">Horse Harbor</span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-gray-600">
+                <a href="#pickup" class="hover:text-blue-900 transition">勝負レース</a>
+                <a href="#latest" class="hover:text-blue-900 transition">最新予想</a>
+                <a href="#archive" class="hover:text-blue-900 transition">的中実績</a>
+                <a href="#about" class="hover:text-blue-900 transition">運営者情報</a>
+            </nav>
+
+            <!-- CTA Button -->
+            <div class="flex items-center gap-3">
+                <a href="#contact" class="hidden sm:flex items-center gap-2 bg-blue-900 text-white px-4 py-2 rounded-full text-xs font-bold hover:bg-blue-800 transition shadow-lg shadow-blue-900/20">
+                    <i class="fas fa-paper-plane"></i> お仕事依頼・連携
+                </a>
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-gray-600 text-xl">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative pt-24 pb-16 md:pt-32 md:pb-24 overflow-hidden hero-pattern text-white">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="max-w-3xl">
+                <div class="inline-block px-3 py-1 mb-4 border border-blue-500/30 rounded-full bg-blue-900/50 backdrop-blur-md text-blue-200 text-xs font-bold tracking-wider">
+                    EST. 2022 | JRA & NAR PREDICTION
+                </div>
+                <h1 class="text-4xl md:text-6xl font-black leading-tight mb-6">
+                    データを超える、<br>
+                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-emerald-400">「思考」</span>のエッセンスを。
+                </h1>
+                <p class="text-gray-400 text-sm md:text-base leading-relaxed mb-8 max-w-lg">
+                    大手サイトの膨大なデータだけでは見えない「勝負の分かれ目」を言語化。
+                    昨年度プラス収支を達成した独自の視点で、あなたの馬券戦略に新たな一手を提供します。
+                </p>
+                
+                <!-- Stats / Trust Indicators -->
+                <div class="grid grid-cols-3 gap-4 border-t border-gray-700/50 pt-8">
+                    <div>
+                        <div class="text-xs text-gray-500 mb-1">昨年度実績</div>
+                        <div class="text-xl md:text-2xl font-bold text-white">勝ち越し<span class="text-emerald-400 text-sm ml-1">▲</span></div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-gray-500 mb-1">得意条件</div>
+                        <div class="text-xl md:text-2xl font-bold text-white">地方/重賞</div>
+                    </div>
+                    <div>
+                        <div class="text-xs text-gray-500 mb-1">更新頻度</div>
+                        <div class="text-xl md:text-2xl font-bold text-white">Daily</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Decorative Elements -->
+        <div class="absolute top-1/2 right-0 transform -translate-y-1/2 translate-x-1/4 opacity-10 pointer-events-none">
+            <i class="fas fa-chess-knight text-9xl text-white"></i>
+        </div>
+    </section>
+
+    <!-- Breaking News / Ticker -->
+    <div class="bg-blue-900 text-white text-xs py-2 overflow-hidden whitespace-nowrap">
+        <div class="container mx-auto px-4 flex items-center">
+            <span class="font-bold bg-amber-500 text-blue-900 px-2 py-0.5 rounded mr-4 text-[10px]">速報</span>
+            <div class="animate-marquee inline-block">
+                <span>2026.01.06 浦和11R 的中！3連単 15,400円</span>
+                <span class="mx-4 text-blue-500">|</span>
+                <span>中山金杯 予想記事公開中：本命馬の見解を更新しました</span>
+                <span class="mx-4 text-blue-500">|</span>
+                <span>【コラム】2026年の地方競馬攻略法を公開</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Grid -->
+    <div class="container mx-auto px-4 py-12 md:py-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+            
+            <!-- Left Column: Main Articles (8 cols) -->
+            <main class="lg:col-span-8 space-y-12">
+                
+                <!-- Section: Pick Up (勝負レース) -->
+                <section id="pickup">
+                    <div class="flex items-end justify-between mb-6">
+                        <h2 class="text-2xl font-bold text-gray-900 flex items-center gap-2">
+                            <i class="fas fa-fire text-amber-500"></i> 今週の勝負レース
+                        </h2>
+                        <span class="text-xs text-gray-500 font-medium">ロジック解説付き</span>
+                    </div>
+
+                    <!-- Featured Card -->
+                    <article class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition group">
+                        <div class="relative h-48 md:h-64 bg-gray-200 overflow-hidden">
+                             <!-- Placeholder for race image -->
+                             <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent z-10"></div>
+                             <img src="/api/placeholder/800/400" alt="レース画像" class="w-full h-full object-cover group-hover:scale-105 transition duration-700">
+                             <div class="absolute bottom-4 left-4 z-20">
+                                <span class="bg-amber-500 text-white text-xs font-bold px-2 py-1 rounded mb-2 inline-block">G1 / 重賞</span>
+                                <h3 class="text-white text-2xl md:text-3xl font-bold leading-tight">有馬記念2025 詳細分析</h3>
+                                <p class="text-gray-300 text-sm mt-1"><i class="far fa-clock"></i> 2025.12.28 15:40 発走</p>
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-start gap-4 mb-4">
+                                <div class="flex-1">
+                                    <p class="text-gray-600 text-sm leading-relaxed mb-4">
+                                        世論は◯◯支持だが、展開係数を考慮すると死角あり。過去10年のデータと、先週のトラックバイアスから導き出した「本当に買える穴馬」とは...
+                                    </p>
+                                    <div class="flex flex-wrap gap-2 text-xs">
+                                        <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded">#中山芝2500m</span>
+                                        <span class="bg-gray-100 text-gray-600 px-2 py-1 rounded">#展開予想</span>
+                                    </div>
+                                </div>
+                                <div class="text-center min-w-[80px]">
+                                    <div class="text-xs text-gray-500 mb-1">自信度</div>
+                                    <div class="text-2xl font-black text-blue-900">S</div>
+                                </div>
+                            </div>
+                            <a href="#" class="block w-full bg-gray-900 text-white text-center py-3 rounded-xl font-bold hover:bg-blue-900 transition">
+                                予想見解をすべて読む
+                            </a>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- Section: Latest List -->
+                <section id="latest">
+                    <div class="flex items-center justify-between mb-6">
+                        <h2 class="text-xl font-bold text-gray-900">最新の予想記事</h2>
+                        <a href="#" class="text-sm text-blue-600 font-bold hover:underline">すべて見る <i class="fas fa-arrow-right text-xs"></i></a>
+                    </div>
+
+                    <div class="space-y-4">
+                        <!-- List Item 1 -->
+                        <a href="#" class="flex flex-col sm:flex-row gap-4 bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:border-blue-200 hover:shadow-md transition">
+                            <div class="w-full sm:w-32 h-32 sm:h-auto bg-blue-50 rounded-lg flex flex-col items-center justify-center text-blue-900 shrink-0">
+                                <span class="text-xs font-bold text-blue-400">URAWA</span>
+                                <span class="text-2xl font-bold">浦和</span>
+                                <span class="text-xs text-gray-500">01/07</span>
+                            </div>
+                            <div class="flex-1 py-1">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="bg-emerald-100 text-emerald-700 text-[10px] font-bold px-2 py-0.5 rounded">無料予想</span>
+                                    <span class="text-xs text-gray-400">2026.01.06 更新</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2 line-clamp-2">【無料】2026年1月7日の浦和競馬全レース予想・見解</h3>
+                                <p class="text-sm text-gray-500 line-clamp-2">昨日は後半レースで万馬券的中。本日は馬場状態が変化しそうなため、内枠先行馬を中心に狙います...</p>
+                            </div>
+                        </a>
+
+                        <!-- List Item 2 -->
+                        <a href="#" class="flex flex-col sm:flex-row gap-4 bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:border-blue-200 hover:shadow-md transition">
+                            <div class="w-full sm:w-32 h-32 sm:h-auto bg-red-50 rounded-lg flex flex-col items-center justify-center text-red-900 shrink-0">
+                                <span class="text-xs font-bold text-red-400">JRA</span>
+                                <span class="text-2xl font-bold">中山</span>
+                                <span class="text-xs text-gray-500">01/05</span>
+                            </div>
+                            <div class="flex-1 py-1">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="bg-gray-100 text-gray-600 text-[10px] font-bold px-2 py-0.5 rounded">回顧</span>
+                                    <span class="text-xs text-gray-400">2026.01.05 更新</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2 line-clamp-2">中山金杯・京都金杯の回顧と次走狙いたい馬</h3>
+                                <p class="text-sm text-gray-500 line-clamp-2">スローペースからの瞬発力勝負となった中山金杯。敗れたものの、上がり最速を記録したあの馬は次走確勝級...</p>
+                            </div>
+                        </a>
+
+                         <!-- List Item 3 -->
+                         <a href="#" class="flex flex-col sm:flex-row gap-4 bg-white p-4 rounded-xl border border-gray-100 shadow-sm hover:border-blue-200 hover:shadow-md transition">
+                            <div class="w-full sm:w-32 h-32 sm:h-auto bg-purple-50 rounded-lg flex flex-col items-center justify-center text-purple-900 shrink-0">
+                                <span class="text-xs font-bold text-purple-400">COLUMN</span>
+                                <span class="text-2xl font-bold">コラム</span>
+                                <span class="text-xs text-gray-500">Knowledge</span>
+                            </div>
+                            <div class="flex-1 py-1">
+                                <div class="flex items-center gap-2 mb-2">
+                                    <span class="bg-gray-100 text-gray-600 text-[10px] font-bold px-2 py-0.5 rounded">知識</span>
+                                    <span class="text-xs text-gray-400">2026.01.04 更新</span>
+                                </div>
+                                <h3 class="text-lg font-bold text-gray-800 mb-2 line-clamp-2">AI予想とどう付き合う？アナログ派が生き残るための「ノイズ除去」術</h3>
+                                <p class="text-sm text-gray-500 line-clamp-2">指数を盲信して負けていませんか？AIが苦手とする「パドック気配」や「騎手心理」をどう馬券に組み込むか解説します。</p>
+                            </div>
+                        </a>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Right Column: Sidebar (4 cols) -->
+            <aside class="lg:col-span-4 space-y-8">
+                
+                <!-- Profile Card (Important for Job Offers) -->
+                <div id="about" class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200 sticky top-24">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="w-16 h-16 bg-gray-200 rounded-full flex items-center justify-center overflow-hidden">
+                            <!-- Icon/Avatar -->
+                            <i class="fas fa-user-tie text-2xl text-gray-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg">管理人 / 予想家</h3>
+                            <p class="text-xs text-gray-500">Horse Harbor Admin</p>
+                        </div>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-6 leading-relaxed">
+                        競馬歴10年。データ分析×直感のハイブリッド予想を展開。
+                        昨年度は地方・中央ともに回収率100%超を達成。
+                        「根拠のある予想」をモットーに日々更新中。
+                    </p>
+                    
+                    <!-- Job Offer Links -->
+                    <div class="space-y-3">
+                        <a href="#contact" class="flex items-center justify-center w-full bg-blue-900 text-white text-sm font-bold py-2.5 rounded-lg hover:bg-blue-800 transition">
+                            <i class="fas fa-envelope mr-2"></i> お仕事・取材の依頼
+                        </a>
+                        <div class="grid grid-cols-2 gap-2">
+                             <a href="#" class="flex items-center justify-center bg-gray-100 text-gray-700 text-sm font-bold py-2.5 rounded-lg hover:bg-gray-200 transition">
+                                <i class="fab fa-twitter mr-2"></i> Twitter
+                            </a>
+                            <a href="#" class="flex items-center justify-center bg-gray-100 text-gray-700 text-sm font-bold py-2.5 rounded-lg hover:bg-gray-200 transition">
+                                <i class="fab fa-instagram mr-2"></i> Instagram
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Skills / Tags -->
+                    <div class="mt-6 pt-6 border-t border-gray-100">
+                        <p class="text-xs font-bold text-gray-400 mb-2">AVAILABLE FOR:</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="text-xs border border-gray-200 px-2 py-1 rounded text-gray-600">記事執筆</span>
+                            <span class="text-xs border border-gray-200 px-2 py-1 rounded text-gray-600">予想提供</span>
+                            <span class="text-xs border border-gray-200 px-2 py-1 rounded text-gray-600">データ分析</span>
+                            <span class="text-xs border border-gray-200 px-2 py-1 rounded text-gray-600">広告掲載</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ranking / Popular -->
+                <div class="bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
+                    <h3 class="font-bold text-gray-900 mb-4 text-sm">よく読まれている記事</h3>
+                    <ul class="space-y-4">
+                        <li class="flex gap-3 items-start">
+                            <span class="text-blue-900 font-black text-lg italic">1</span>
+                            <a href="#" class="text-sm text-gray-700 hover:text-blue-900 font-medium">【検証】大手競馬サイトの有料予想を1ヶ月買い続けてみた結果</a>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="text-gray-400 font-black text-lg italic">2</span>
+                            <a href="#" class="text-sm text-gray-700 hover:text-blue-900 font-medium">地方競馬で勝つための3つの鉄則：パドックの見方編</a>
+                        </li>
+                        <li class="flex gap-3 items-start">
+                            <span class="text-gray-400 font-black text-lg italic">3</span>
+                            <a href="#" class="text-sm text-gray-700 hover:text-blue-900 font-medium">2026年 期待の3歳馬リスト10選</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Ad Space Placeholder -->
+                <div class="bg-gray-100 rounded-2xl h-64 flex items-center justify-center border-2 border-dashed border-gray-300 relative overflow-hidden group cursor-pointer">
+                    <div class="text-center">
+                        <p class="text-gray-400 font-bold text-sm">スポンサー募集中</p>
+                        <p class="text-xs text-gray-400 mt-1">お問い合わせはこちら</p>
+                    </div>
+                     <div class="absolute inset-0 bg-white/50 opacity-0 group-hover:opacity-100 transition flex items-center justify-center">
+                        <span class="bg-blue-900 text-white text-xs px-3 py-1 rounded font-bold">詳細を見る</span>
+                    </div>
+                </div>
+
+            </aside>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-6 h-6 bg-blue-600 rounded flex items-center justify-center text-white text-xs font-bold">H</div>
+                        <span class="text-lg font-bold text-white">Horse Harbor</span>
+                    </div>
+                    <p class="text-sm text-gray-500 mb-4 max-w-sm">
+                        競馬予想の新たなスタンダードを。確かな分析とロジックで、あなたの週末をサポートします。
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white transition"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-sm">コンテンツ</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-blue-400 transition">中央競馬予想</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">地方競馬予想</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">回顧・分析</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">コラム</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4 text-sm">サイト情報</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#" class="hover:text-blue-400 transition">運営者プロフィール</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">お仕事依頼</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">プライバシーポリシー</a></li>
+                        <li><a href="#" class="hover:text-blue-400 transition">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+                <p class="text-xs text-gray-600">© 2026 Horse Harbor. All rights reserved.</p>
+                <p class="text-xs text-gray-600">※馬券の購入は個人の責任において行ってください。</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
